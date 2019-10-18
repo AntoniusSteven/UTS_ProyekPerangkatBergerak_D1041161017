@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".komponen3">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/android"
+            android:layout_weight=".20"/>
+
+        <TextView
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Komponen 3 \n Service"
+        android:textSize="12pt"
+        android:textAlignment="center"
+            android:layout_weight=".60"/>
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/android"
+            android:layout_weight=".20"/>
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="\n\n\nService adalah sebuah komponen aplikasi yang bisa melakukan operasi yang berjalan lama di latar belakang dan tidak menyediakan antarmuka pengguna. \nKomponen aplikasi lain bisa memulai layanan dan komponen aplikasi tersebut akan terus berjalan di latar belakang walaupun pengguna beralih ke aplikasi lain. Selain itu, komponen bisa mengikat ke layanan untuk berinteraksi dengannya dan bahkan melakukan komunikasi antarproses (IPC). Misalnya, layanan mungkin menangani transaksi jaringan, memutar musik, melakukan file I/O, atau berinteraksi dengan penyedia materi dari latar belakang."
+        android:textSize="8pt"
+        android:justificationMode="inter_word"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Berikut merupakan contoh syntax dari Service :"
+        android:textSize="8pt"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#808080">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="5pt"
+            android:text="public class HelloIntentService extends IntentService {
+            \n   public HelloIntentService() {
+            \n     super(''HelloIntentService''); }
+            \n     /**
+            \n       * The IntentService calls this method from the default worker thread with
+            \n       * the intent that started the service. When this method returns, \n          IntentService
+            \n       * stops the service, as appropriate.
+            \n       */
+            \n    @Override
+            \n    protected void onHandleIntent(Intent intent) {
+            \n    // Normally we would do some work here, like download a file.
+            \n    // For our sample, we just sleep for 5 seconds.
+            \n     try {
+            \n      Thread.sleep(5000);}
+            \n       catch (InterruptedException e) {
+            \n       // Restore interrupt status.
+            \n       Thread.currentThread().interrupt();
+            \n      }
+            \n     }
+            \n    }
+
+                "
+            android:textColor="#FFFFFF"/>
+
+    </FrameLayout>
+
+    <Button
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
+        android:text="Link Materi"
+        android:background="@color/colorPrimary"
+        android:layout_gravity="center"
+        android:id="@+id/service"/>
+
+    </LinearLayout>
+
+</ScrollView>

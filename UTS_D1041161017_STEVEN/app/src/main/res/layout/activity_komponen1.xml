@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Komponen1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent">
+
+          <ImageView
+              android:layout_width="100dp"
+              android:layout_height="100dp"
+              android:src="@drawable/android"
+              android:layout_weight=".20"/>
+
+          <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="\nKomponen 1 \nActivity"
+            android:textSize="12pt"
+            android:textAlignment="center"
+            android:layout_weight=".60"/>
+
+          <ImageView
+              android:layout_width="100dp"
+              android:layout_height="100dp"
+              android:src="@drawable/android"
+              android:layout_weight=".20"/>
+      </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="\n\n\n   Activity adalah sebuah komponen aplikasi yang menyediakan layar yang digunakan pengguna untuk berinteraksi guna melakukan sesuatu, misalnya memilih nomor ponsel, mengambil foto, mengirim email, atau menampilkan peta. Tiap aktivitas diberi sebuah jendela untuk menggambar antarmuka penggunanya. Jendela ini biasanya mengisi layar, namun mungkin lebih kecil daripada layar dan mengambang di atas jendela lain.
+            \n   Sebuah aplikasi biasanya terdiri atas beberapa aktivitas yang terikat secara longgar satu sama lain. Biasanya, satu aktivitas dalam aplikasi ditetapkan sebagai aktivitas utama, yang ditampilkan kepada pengguna saat membuka aplikasi untuk pertama kali. Tiap aktivitas kemudian bisa memulai aktivitas lain untuk melakukan berbagai tindakan. Tiap kali aktivitas baru dimulai, aktivitas sebelumnya akan dihentikan, namun sistem mempertahankan aktivitas dalam sebuah tumpukan (back-stack). Bila sebuah aktivitas baru dimulai, aktivitas itu akan didorong ke atas back-stack dan mengambil fokus pengguna. Back-stack mematuhi mekanisme dasar tumpukan masuk terakhir, keluar pertama, jadi, bila pengguna selesai dengan aktivitas saat ini dan menekan tombol Kembali, aktivitas akan dikeluarkan dari tumpukan (dan dimusnahkan) dan aktivitas sebelumnya akan dilanjutkan."
+            android:textSize="8pt"
+            android:justificationMode="inter_word"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Berikut merupakan contoh syntax dari Activity :"
+            android:justificationMode="inter_word"
+            android:textSize="8pt"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#808080">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="package com.example.android.twoactivities;
+                            \nimport android.support.v7.app.AppCompatActivity;
+                            \nimport android.os.Bundle;
+                            \nimport android.util.Log;
+                            \nimport android.view.View;
+
+                            \n  public class MainActivity extends AppCompatActivity{
+                            \n   private static final String LOG_TAG=
+                            \n    MainActivity.class.getSimpleName();
+
+                            \n      @Override
+                            \n      protected void onCreate(Bundle savedInstanceState){
+                            \n      super.onCreate(savedInstanceState);
+                            \n      setContentView(R.layout.activity_main);}
+
+                            \n      public void launchSecondActivity(View view){
+                            \n      Log.d(LOG_TAG, 'Button clicked!'); \n }
+                                        \n}"
+                android:textSize="5pt"
+                android:textColor="#ffffff"/>
+
+        </FrameLayout>
+
+        <Button
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:text="Link Materi"
+            android:background="@color/colorPrimary"
+            android:layout_gravity="center"
+            android:id="@+id/activity"/>
+
+
+    </LinearLayout>
+
+</ScrollView>
